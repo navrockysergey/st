@@ -6,10 +6,11 @@ $st_white: #fff;
 $st_black: #000;
 $st_font: 'Segoe UI Semilight', sans-serif;
 $st_font_bold:  'Segoe UI Bold', sans-serif;
-$st_font_size: 20px;
-$st_font_size_m: 25px;
+$st_font_semi_bold:  'Segoe UI SemiBold';
+$st_font_size: 28px;
+$st_font_size_m: 30px;
 $st_font_size_l: 32px;
-$st_font_size_xl: 46px;
+$st_font_size_xl: 65px;
 
 $st_color_1: #357bac;
 $st_color_2: #6da6ca;
@@ -96,9 +97,9 @@ h1 {
     font-size: $st_font_size_xl;
     font-family: $st_font_bold;
     color: $st_black;
-    margin-bottom: 52px;
+    margin-bottom: 32px;
     span {
-        display: block;
+        display: inline-block;
         padding-bottom: 10px;
         background: linear-gradient(to right, $st_color_1 0%, $st_color_2 100%);
         -webkit-background-clip: text;
@@ -119,7 +120,7 @@ h1 {
 h2 {
     font-family: $st_font;
     font-size: $st_font_size;
-    line-height: 1.5;
+    line-height: 1.4;
     @include m(tablet) {
         font-size: $st_font_size_m;
         text-align: center;
@@ -152,6 +153,7 @@ h2 {
             background-repeat: no-repeat;
             position: absolute;
             z-index: 1;
+            background-size: 63%;
             @include m(mobile) {
                 background-size: 100%;
                 background-position: center 105%;
@@ -196,9 +198,9 @@ h2 {
             }
         }
         &__content {
-            padding: $st_padding;
             @include m(mobile) {
                 text-align: center;
+                padding: $st_padding;
             }
             @include m(tablet) {
                 text-align: center;
@@ -233,7 +235,7 @@ h2 {
             }
         }
         &__buttons {
-            margin-top: 95px;
+            margin-top: 90px;
             display: inline-flex;
             flex-direction: column;
             padding: 0 42px;
@@ -249,9 +251,9 @@ h2 {
 }
 
 .container {
-    padding: 80px $st_padding;
+    padding: 82px $st_padding;
     margin: auto;
-    max-width: 1400px - 50px;
+    max-width: 1450px;
     position: relative;
     z-index: 999;
     @include m(mobile) {
@@ -267,6 +269,7 @@ h2 {
     align-items: center;
     justify-content: space-between;
     font-size: $st_font_size_l;
+    font-family: $st_font_semi_bold;
     @include m(mobile) {
         font-size: $st_font_size_m - 5;
     }
@@ -279,7 +282,7 @@ h2 {
         }
     }
     + .button {
-        margin-top: 63px;
+        margin-top: 77px;
         @include m(mobile) {
             margin-top: $st_padding + 10;
         }

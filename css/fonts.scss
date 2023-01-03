@@ -37,6 +37,14 @@ $font_prefix: iqorpo;
 }
 
 @font-face {
+    font-family: 'Segoe UI SemiBold';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/SegoeUI-SemiBold.woff') format('woff');
+}
+
+@font-face {
     font-family: 'st';
     src:  url('../fonts/st.eot?ebt89c');
     src:  url('../fonts/st.eot?ebt89c#iefix') format('embedded-opentype'),
