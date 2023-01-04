@@ -8,9 +8,9 @@
 
 $st_white: #fff;
 $st_black: #000;
-$st_font: 'Segoe UI Semilight', sans-serif;
-$st_font_bold:  'Segoe UI Bold', sans-serif;
-$st_font_semi_bold:  'Segoe UI SemiBold', sans-serif;
+$st_font: 'Segoe UI Semilight', sans-serif!important;
+$st_font_bold:  'Segoe UI Bold', sans-serif!important;
+$st_font_semi_bold:  'Segoe UI SemiBold', sans-serif!important;
 $st_font_size: 28px;
 $st_font_size_m: 30px;
 $st_font_size_l: 32px;
@@ -55,6 +55,16 @@ $st_padding: 25px;
   }
   @if $breakpoint == min1200 {    
     @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == max1400 {    
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == min1400 {    
+    @media (min-width: 1400px) {
       @content;
     }
   }
@@ -179,6 +189,9 @@ header {
         }
         &__logo {
             .hfe-site-logo {
+                @include m(min1400) {
+                    float: right;
+                }
                 img {
                     display: block;
                     max-width: 407px;
